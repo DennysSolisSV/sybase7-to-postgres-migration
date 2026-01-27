@@ -14,6 +14,7 @@ Script Purpose:
 
 
 DROP TABLE IF EXISTS bronze.erp_clientes;
+
 CREATE TABLE bronze.erp_clientes (
     plucliente INT,
     codigo INT,
@@ -56,6 +57,7 @@ CREATE TABLE bronze.erp_clientes (
 
 
 DROP TABLE IF EXISTS bronze.erp_divisiones;
+
 CREATE TABLE bronze.erp_divisiones (
 	pludivision INT,
 	pluempresa INT,
@@ -80,6 +82,7 @@ CREATE TABLE bronze.erp_divisiones (
 );
 
 DROP TABLE IF EXISTS bronze.erp_usuarios;
+
 CREATE TABLE bronze.erp_usuarios(
     usuarioid INT,
 	codigo INT,
@@ -88,13 +91,14 @@ CREATE TABLE bronze.erp_usuarios(
 	clave TEXT,
 	plugestor INT,
 	cargo TEXT,
-	habilitado TEXT
+	habilitado TEXT,
 
 	_load_ts TIMESTAMPTZ DEFAULT NOW()
 );
 
 
 DROP TABLE IF EXISTS bronze.erp_gestores;
+
 CREATE TABLE bronze.erp_gestores (
     plugestor INT,
 	codigo INT,
@@ -105,6 +109,7 @@ CREATE TABLE bronze.erp_gestores (
 );
 
 DROP TABLE IF EXISTS bronze.erp_inventario;
+
 CREATE TABLE bronze.erp_inventario (
 	pluempresa INT,
 	pludivision INT,
@@ -137,6 +142,7 @@ CREATE TABLE bronze.erp_inventario (
 );
 
 DROP TABLE IF EXISTS bronze.erp_empresas;
+
 CREATE TABLE bronze.erp_empresas (
     empresaid INT,
     codigo TEXT,
@@ -190,6 +196,7 @@ CREATE TABLE bronze.erp_empresas (
 );
 
 DROP TABLE IF EXISTS bronze.erp_docclientesm;
+
 CREATE TABLE bronze.erp_docclientesm (
     pludoccliente INT,
     pluusuario INT,
@@ -287,6 +294,7 @@ CREATE TABLE bronze.erp_docclientesm (
 );
 
 DROP TABLE IF EXISTS bronze.erp_docclientesd;
+
 CREATE TABLE bronze.erp_docclientesd (
     pludoccliente INT,
     pluempresa INT,
@@ -311,6 +319,7 @@ CREATE TABLE bronze.erp_docclientesd (
 );
 
 DROP TABLE IF EXISTS bronze.erp_productos;
+
 CREATE TABLE bronze.erp_productos (
     pluproducto INT,
     pluempresa INT,
@@ -381,4 +390,5 @@ CREATE TABLE bronze.erp_productos (
 
     _load_ts TIMESTAMPTZ DEFAULT NOW()
 );
+
 
