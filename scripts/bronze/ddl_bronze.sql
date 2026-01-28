@@ -50,9 +50,7 @@ CREATE TABLE bronze.erp_clientes (
     celular TEXT,
     fechadenacimiento DATE,
     esagenteretenciongubernamental TEXT,
-    fechacreacion DATE,
-
-    _load_ts TIMESTAMPTZ DEFAULT NOW()
+    fechacreacion DATE
 );
 
 
@@ -75,10 +73,7 @@ CREATE TABLE bronze.erp_divisiones (
 	enviar TEXT,
 	recibir TEXT,
 	regionid INT,
-	factorcomprasplaza NUMERIC(13,2),
-
-	_load_ts TIMESTAMPTZ DEFAULT NOW()
-	
+	factorcomprasplaza NUMERIC(13,2)
 );
 
 DROP TABLE IF EXISTS bronze.erp_usuarios;
@@ -91,9 +86,7 @@ CREATE TABLE bronze.erp_usuarios(
 	clave TEXT,
 	plugestor INT,
 	cargo TEXT,
-	habilitado TEXT,
-
-	_load_ts TIMESTAMPTZ DEFAULT NOW()
+	habilitado TEXT
 );
 
 
@@ -103,9 +96,7 @@ CREATE TABLE bronze.erp_gestores (
     plugestor INT,
 	codigo INT,
 	nombre TEXT,
-	habilitado TEXT,
-
-	_load_ts TIMESTAMPTZ DEFAULT NOW()
+	habilitado TEXT
 );
 
 DROP TABLE IF EXISTS bronze.erp_inventario;
@@ -136,9 +127,7 @@ CREATE TABLE bronze.erp_inventario (
 	docaduana TEXT,
 	paisproveedor TEXT,
 	documentoid  INT,
-	itemdocumento INT,
-	
-    _load_ts TIMESTAMPTZ DEFAULT NOW()
+	itemdocumento INT
 );
 
 DROP TABLE IF EXISTS bronze.erp_empresas;
@@ -190,9 +179,7 @@ CREATE TABLE bronze.erp_empresas (
     noesagentepercepcion TEXT,
     retenerivadecr TEXT,
     validanoregistro TEXT,
-    corteusacorrelativotk TEXT,
-
-    _load_ts TIMESTAMPTZ DEFAULT NOW()
+    corteusacorrelativotk TEXT
 );
 
 DROP TABLE IF EXISTS bronze.erp_docclientesm;
@@ -288,9 +275,7 @@ CREATE TABLE bronze.erp_docclientesm (
     referenciacontratoid INT,
     totalnosujetos NUMERIC(13,4),
     comisionpagada TEXT,
-    cuponaplicado TEXT,
-
-    _load_ts TIMESTAMPTZ DEFAULT NOW()
+    cuponaplicado TEXT
 );
 
 DROP TABLE IF EXISTS bronze.erp_docclientesd;
@@ -313,9 +298,7 @@ CREATE TABLE bronze.erp_docclientesd (
     cupones NUMERIC(13,2),
     comision NUMERIC(13,2),
     costopromempresa NUMERIC(13,4),
-    armardesarmar TEXT,
-
-    _load_ts TIMESTAMPTZ DEFAULT NOW()
+    armardesarmar TEXT
 );
 
 DROP TABLE IF EXISTS bronze.erp_productos;
@@ -386,9 +369,6 @@ CREATE TABLE bronze.erp_productos (
     noesunidadmanejo TEXT,
     manejaseries TEXT,
     serieeslote TEXT,
-    tiposerieid INT,
-
-    _load_ts TIMESTAMPTZ DEFAULT NOW()
+    tiposerieid INT
 );
-
 
